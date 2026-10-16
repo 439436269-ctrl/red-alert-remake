@@ -96,3 +96,11 @@ _verify/          端到端验证脚本与截图（playwright 驱动真浏览器
 "红色警戒 / Red Alert" 只作为**描述性称呼**指代玩法风格，商标归其权利人所有。
 
 参考：OpenRA 的法律声明 <https://www.openra.net/legal/>
+
+---
+
+## 六、继续开发？先看 [NOTES.md](NOTES.md)
+
+开发过程真实踩过的 8 个坑（AI 放不下建筑、矿车经济归零、AI 冷战、PS 传 JSON 的 BOM 坑、Playwright 用本机 Chrome…）
+每条都是**现象 → 根因 → 对策**，外加架构决策与平衡调参备忘。改动前先读它，别重蹈覆辙。
+
