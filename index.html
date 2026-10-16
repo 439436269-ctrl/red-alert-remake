@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>红色警戒 · 网页重制版 — RED ALERT: WEB REMAKE</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0605'/%3E%3Cpath d='M8 24V8h9a5 5 0 0 1 0 10h-4l7 6h-6l-6-6v6z' fill='%23e8352a'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="boot">
+  <div class="boot-inner">
+    <div class="boot-logo">RED&nbsp;ALERT</div>
+    <div class="boot-sub">网页重制版 · WEB REMAKE · 非官方粉丝作品</div>
+    <div class="boot-bar"><i></i></div>
+    <div class="boot-hint">按任意键或点击进入</div>
+    <div class="boot-fineprint">本作品为原创引擎的致敬之作，不包含任何原作素材；与 Electronic Arts / Westwood Studios 无关。</div>
+  </div>
+</div>
+
+<div id="app" hidden>
+  <div id="topbar">
+    <div class="tb-money">
+      <span class="tb-ico">$</span>
+      <span id="money">4000</span>
+    </div>
+    <div class="tb-side" id="sideName">SOVIET · 苏联</div>
+    <div class="tb-clock" id="clock">00:00</div>
+    <div class="tb-power">
+      <span>POWER</span>
+      <div class="pw-track"><i id="pwUse"></i><em id="pwCap"></em></div>
+      <span class="pw-num" id="pwNum">0/0</span>
+    </div>
+    <div class="tb-radar">
+      <canvas id="minimap" width="180" height="180"></canvas>
+      <div class="radar-sweep"></div>
+      <div id="radarOff" class="radar-off hidden">RADAR OFFLINE</div>
+    </div>
+    <button id="btnHelp" class="tb-btn">F1 帮助</button>
+  </div>
+
+  <div id="stage">
+    <canvas id="view"></canvas>
+
+    <div id="selbox-info" class="hidden">
+      <div id="selbox-title"></div>
+      <div id="selbox-hp"><i></i></div>
+      <div id="selbox-sub"></div>
+    </div>
+
+    <div id="marquee" class="hidden"></div>
+  </div>
+
+  <div id="buildbar">
+    <div class="bb-tabs">
+      <button class="bb-tab active" data-tab="struct">建筑</button>
+      <button class="bb-tab" data-tab="inf">步兵</button>
+      <button class="bb-tab" data-tab="veh">载具</button>
+    </div>
+    <div class="bb-items" id="bbItems"></div>
+    <div class="bb-side">
+      <button class="bb-special" id="btnNuke" disabled>
+        <span class="sp-ico">☢</span><span class="sp-label">核弹</span><span class="sp-cd" id="nukeCd"></span>
+      </button>
+      <button class="bb-special" id="btnSat" disabled>
+        <span class="sp-ico">🛰</span><span class="sp-label">间谍卫星</span><span class="sp-cd" id="satCd"></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="msglog"></div>
+
+  <div id="modal" class="hidden">
+    <div class="modal-card">
+      <div id="modal-body"></div>
+      <div class="modal-actions" id="modal-actions"></div>
+    </div>
+  </div>
+
+  <div id="tip" class="hidden"></div>
+</div>
+
+<script src="js/rules.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

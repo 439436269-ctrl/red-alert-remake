@@ -1,0 +1,13 @@
+# 红色警戒·网页重制版 —— 验证脚本输出（可再生，不入库）
+_verify/*.png
+_verify/last-run.txt
+_verify/last-win.txt
+
+# 依赖
+node_modules/
+__pycache__/
+*.pyc
+
+# 系统
+.DS_Store
+Thumbs.db
